@@ -1,2 +1,9 @@
-buffy@postal_lane  Ed25519/Cv25519  fpr: 23EB2F8BF10E90AD39FA8AE98CCDD163DE21367A
-(marco@postal_lane  fpr: PENDING — cross-check via Director relay)
+# POSTAL LANE — KEY FINGERPRINTS (ceremony log)
+# Cross-check via trusted relay lane REQUIRED before either shore treats the lane as OPEN.
+
+MARCO (cloud shore) — generated 2026-09-17 ~18:53 UTC, Curve25519/ECC, dedicated key
+  fingerprint: C694 3DF1 ACCD D3EF 587D BE76 CD0A FC08 12CA C1B4
+  status: PUBLISHED to /keys/marco.pub.asc; awaiting Buffy's read-back confirmation via relay
+
+BUFFY (rig shore) — PENDING key ceremony rig-side
+  fingerprint: (awaiting buffy.pub.asc)
