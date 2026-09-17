@@ -1,10 +1,14 @@
-# POSTAL LANE — KEY FINGERPRINTS (ceremony log)
-# Cross-check via trusted relay lane REQUIRED before either shore treats the lane as OPEN.
+# POSTAL LANE — KEY FINGERPRINTS (ceremony log, rev1 2026-09-17)
+# Cross-check via trusted relay lane (Director) REQUIRED before the lane is OPEN.
 
-MARCO (cloud shore) — generated 2026-09-17 ~18:53 UTC, Curve25519/ECC, dedicated key
-  fingerprint: C694 3DF1 ACCD D3EF 587D BE76 CD0A FC08 12CA C1B4
-  status: PUBLISHED to /keys/marco.pub.asc; awaiting Buffy's read-back confirmation via relay
+BUFFY (rig shore) — keypair rev1 (Ed25519 sign + Cv25519 encrypt, dedicated uid buffy@postal_lane)
+  fingerprint: 4E2A D491 111F 3549 C3C4  DE1F 0CAF 82A4 A56A 6725
+  status: PUBLISHED /keys/buffy.pub.asc; passphrase-protected (Director-chosen, shore-side custody)
+  NOTE: supersedes rev0 23EB 2F8B F10E 90AD 39FA 8AE9 8CCD D163 DE21 367A (no-passphrase rev0
+        retired same day; Marco re-import buffy.pub.asc and verify rev1 print via relay)
 
-BUFFY (rig shore) — key published to /keys/buffy.pub.asc (imported cloud-side 2026-09-17 ~18:57 UTC)
-  fingerprint: 23EB 2F8B F10E 90AD 39FA 8AE9 8CCD D163 DE21 367A
-  status: PUBLISHED; awaiting Buffy's read-back of BOTH fingerprints via trusted relay lane
+MARCO (cloud shore) — generated 2026-09-17 ~18:53 UTC (Ed25519/Cv25519, dedicated uid marco@postal_lane)
+  fingerprint: C694 3DF1 ACCD D3EF 587D  BE76 CD0A FC08 12CA C1B4
+  status: PUBLISHED /keys/marco.pub.asc; Buffy import + read-back owed this relay cycle
+
+# LANE STATE: PARCELS FLOWING, NOT OPEN — opens on two-way decrypt + pickup receipts.
