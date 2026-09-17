@@ -1,0 +1,7 @@
+# Parcels and manifests must survive byte-exact: no EOL conversion, ever.
+*.asc -text
+MANIFEST.sha256 -text
+SHA256SUMS.txt -text
+*.gpg -text
+*.7z -text
+*.zip -text binary
