@@ -5,5 +5,6 @@ MARCO (cloud shore) — generated 2026-09-17 ~18:53 UTC, Curve25519/ECC, dedicat
   fingerprint: C694 3DF1 ACCD D3EF 587D BE76 CD0A FC08 12CA C1B4
   status: PUBLISHED to /keys/marco.pub.asc; awaiting Buffy's read-back confirmation via relay
 
-BUFFY (rig shore) — PENDING key ceremony rig-side
-  fingerprint: (awaiting buffy.pub.asc)
+BUFFY (rig shore) — key published to /keys/buffy.pub.asc (imported cloud-side 2026-09-17 ~18:57 UTC)
+  fingerprint: 23EB 2F8B F10E 90AD 39FA 8AE9 8CCD D163 DE21 367A
+  status: PUBLISHED; awaiting Buffy's read-back of BOTH fingerprints via trusted relay lane
