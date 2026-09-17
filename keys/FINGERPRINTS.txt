@@ -1,0 +1,2 @@
+buffy@postal_lane  Ed25519/Cv25519  fpr: 23EB2F8BF10E90AD39FA8AE98CCDD163DE21367A
+(marco@postal_lane  fpr: PENDING — cross-check via Director relay)

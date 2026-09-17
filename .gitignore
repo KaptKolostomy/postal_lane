@@ -1,0 +1,40 @@
+# POSTAL LANE — gitignore
+# Law: the repo is a PUBLIC mail channel. Nothing private, nothing secret,
+# nothing vault-grade ever gets committed. (L-wire for files.)
+
+# --- ABSOLUTE: private key material (the ceremony's whole point) ---
+*.key
+*.priv*
+*private*
+*_secret_*
+secrets/
+private/
+.gnupg/
+gnupg/
+
+# --- Absolute: vault-grade and rig-side originals stay shore-side ---
+vault*/
+*.7z                 # Cipher Seal archives never ride the mail
+*.kdbx *.kdb         # key databases
+*_SAVED/
+
+# --- Working state (Buffy shore) ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.tmp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+
+# --- Drop-lane working dirs (the mailbox, not the mail) ---
+vandal_lite_drop/
+state/
+logs/
+
+# --- Editor noise ---
+.vscode/
+.idea/
+*.swp
