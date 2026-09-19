@@ -1,2 +1,3 @@
 parcel_2026-09-19_040.asc  size=2934  payload_sha16=cd06ecb2de8de06a  sealed=2026-09-19T17:00:55Z
 parcel_2026-09-19_041.asc  size=2629  payload_sha16=8b2b01555d752fe9  sealed=2026-09-19T17:12:46Z
+parcel_2026-09-19_042.asc  size=3165  payload_sha16=ae637659851b13e2  sealed=2026-09-19T17:41:46Z
