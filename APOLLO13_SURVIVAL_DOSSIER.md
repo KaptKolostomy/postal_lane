@@ -299,14 +299,18 @@ spine parse + dup-key scan + content checks + SELF-VERIFY PASS required.
   protocol (bebcdad), parcel_090 (07cce91) push-verified. Lesson banked.
 - 09-26 E0 batch build: three luac-gate catches → miz-surgery law.
 - 09-25→26 ENVIRONMENTAL: Freebuff rolled ~27 agent-platform updates in one
-  week (Director observation). Witnessed symptoms: session ends mid-turn,
-  failed turns, vendored ripgrep binary vanishing (ENOENT), connection drop
-  mid-stream. Classification discipline: environment failures (session/tool
-  loss) vs agent failures (wrong bytes, unread files, conflated repos) get
-  blamed separately — churn excuses nothing in the ledger. MITIGATION ALREADY
-  IN DOCTRINE: state lives in repos, not conversation memory; every session
-  drop this week was survivable because git carried the continuity. This
-  dossier is as much for the next rig-agent instance as for cloud shore.
+  week (Director observation); **Director's count: 3 UX changes visible** —
+  the visible fraction (~11%) implies the invisible surface (agent runtime,
+  vendored binaries, tool paths) took the larger share. Witnessed symptoms:
+  session ends mid-turn, failed turns, vendored ripgrep vanishing (ENOENT),
+  connection drop mid-stream. UX changes = WITNESS MARKERS for update waves:
+  when the Director sees UI shift, assume the floor moved underneath.
+  Classification discipline: environment failures (session/tool loss) vs
+  agent failures (wrong bytes, unread files, conflated repos) blamed
+  separately — churn excuses nothing in the ledger. MITIGATION IN DOCTRINE:
+  state lives in repos, not conversation memory; every session drop this
+  week was survivable because git carried the continuity. Cloud-095 builds
+  the correlation law (version witness + update window) in parallel.
 
 ## §11 RECOVERY PROCEDURES
 
