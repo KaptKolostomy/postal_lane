@@ -28,7 +28,7 @@ Objective: E0 batch night (50 runs) → variance numbers; T-MORALE phase table n
 ## 4 QUEUES (TOP-3 each — truth = Liber 06, card = pointers)
 - RIG OWES: ① MAZE_EYES_v1 rebuild vs 343-wall base miz + pair-check ② handshake R3.5 ③ MOOSE C2 neutral-voice scrub (awaiting Director gavel on keep-vs-drop).
 - CLOUD EXPECTS: ① v1 countersign (rides this watch) ② Director final gavel (name + adoption) ③ Phase 1-2 sequencing on Director's word.
-- GAVELS (Director — memo + this card; now 9): audit cadence · rev1 passphrase RED · E0 server go · Tactician arming · Guardian custody · CQD send · trainer Qs (all 6 rec'd) · MOOSE C2 docs voice · card name+adoption.
+- GAVELS (Director — memo + this card; now 10): audit cadence · rev1 passphrase RED · E0 server go · Tactician arming · Guardian custody · CQD send · trainer Qs (all 6 rec'd) · MOOSE C2 docs voice · card name+adoption · Bible v1.1 errata (§2.4 dash examples).
 
 ## 5 LAWS QUICKLOAD (one-liners; full text = doctrine card / dossier / BIBLE)
 - **Courier receipt ≠ delivery receipt** — push-verify (`git log origin/...`), never trust "sent".
