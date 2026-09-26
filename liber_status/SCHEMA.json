@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "law": "WORKBOOK IS A RENDERED VIEW, NOT A SOURCE OF TRUTH. Ledgers win disagreements. No hand-editing.",
+  "custody_format": "CSV per sheet (diffable, lane-friendly). Reading format: xlsx.",
+  "sheets": {
+    "00_INDEX":     {"columns": ["sheet", "one_liner", "source", "rows"], "source": "generator"},
+    "01_TOOLS":     {"columns": ["name", "path", "category", "purpose", "status", "hygiene_flag", "evidence", "last_verified"], "source": "rig_audit"},
+    "02_VENVS":     {"columns": ["package", "version", "venv", "imported_by", "orphan_flag", "stale_flag"], "source": "rig_audit"},
+    "03_TESTING":   {"columns": ["tcard", "battery", "description", "status", "verdict", "date"], "source": "vault"},
+    "04_BUGS":      {"columns": ["id", "found_by", "description", "evidence", "disposition", "date_closed"], "source": "both"},
+    "05_IDEAS":     {"columns": ["id", "date", "originator", "type", "description", "status", "parked_reason"], "source": "rig_audit"},
+    "06_OPEN_ITEMS":{"columns": ["item", "category", "owner", "blocked_on", "priority", "status"], "source": "vault"},
+    "07_FLEET":     {"columns": ["agent", "role", "engine", "vram_gb", "status", "notes"], "source": "vault"},
+    "08_DOCTRINES": {"columns": ["name", "summary", "ratified", "source_doc"], "source": "vault"},
+    "09_TIMELINE":  {"columns": ["date", "event", "significance", "source_doc"], "source": "vault"}
+  },
+  "staleness_law": "00_INDEX carries generated_at stamp. Red if older than last ledger commit.",
+  "version_law": "Schema changes bump schema_version + both generators updated same day."
+}
