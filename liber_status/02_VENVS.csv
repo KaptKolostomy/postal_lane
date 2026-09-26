@@ -1,0 +1,37 @@
+package,version,venv,imported_by,orphan_flag,stale_flag,verification_method,known_unknown_id
+polars,1.44.2,forge,core_schema.py + pipeline tools,no,no,freeze match 09-14 pin EXACT,
+numpy,2.5.3,forge,widespread,no,no,freeze match 09-14 pin EXACT,
+pydcs,0.15.0,forge,miz builders + pydcs_spawner,no,PIN_GAP,post-09-14 add unpinned; re-freeze due,
+scipy,1.18.1,forge,verification + geo lanes,no,PIN_GAP,post-09-14 add unpinned; re-freeze due,
+opencv-contrib-python,5.0.0.93,forge,video_lab/OCR + edm lanes,no,PIN_GAP,post-09-14 add unpinned; re-freeze due,
+requests,2.x,forge,librarian_ingest.py,no,no,present per audit flag 4,
+pillow,2.x,forge,librarian_ingest.py + imaging,no,no,present per audit flag 4,
+chromadb,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+pymupdf,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+pdfplumber,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+pytesseract,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+python-docx,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+ebooklib,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+beautifulsoup4,(missing),forge,librarian_ingest.py,yes,LOST,librarian pathway dead until installed,KU-9
+mcp,(missing),forge,pyMCP_* servers + soulsmith_mcp_server,yes,LOST,never installed in ANY house venv,
+fastmcp,(missing),forge,soulsmith_mcp_server,yes,LOST,never installed in ANY house venv,
+torch,2.14.0+cu126,tts_lab,Qwen3-TTS lane,no,no,audit 1c census,
+faster-whisper,1.2.1,tts_lab,voice stack,no,no,aligned across venvs,
+ctranslate2,4.8.1,tts_lab,voice stack,no,SKEW,forge/acme hold 4.8.2; oldest pin,
+numpy,1.26.4,acme_librarian,librarian pipeline (E: side),no,SKEW,major-version behind forge 2.5.3,
+polars,0.20.7,acme_librarian,librarian pipeline (E: side),no,SKEW,major-version behind forge 1.44.2,
+huggingface_hub,1.28.0,acme_librarian,librarian pipeline (E: side),no,SKEW,forge 1.31.0,
+huggingface_hub,0.36.2,tts_lab,voice stack,no,SKEW,oldest pin in house,
+onnxruntime,1.29.0,acme_librarian,librarian pipeline (E: side),no,SKEW,forge/tts hold 1.30.0,
+sounddevice,0.4.6,acme_librarian,librarian pipeline (E: side),no,SKEW,forge/tts hold 0.5.6,
+tokenizers,0.22.2,tts_lab,voice stack,no,SKEW,families divergent,
+deltalake,(installed),forge,(no house import found),YES_ORPHAN_CANDIDATE,,purge-candidate list flag 6,
+pyiceberg,(installed),forge,(no house import found),YES_ORPHAN_CANDIDATE,,purge-candidate list flag 6,
+connectorx,(installed),forge,(no house import found),YES_ORPHAN_CANDIDATE,,purge-candidate list flag 6,
+gevent,(installed),forge,(no house import found),YES_ORPHAN_CANDIDATE,,purge-candidate list flag 6,
+altair,(installed),forge,(no house import found),YES_ORPHAN_CANDIDATE,,purge-candidate list flag 6,
+xlsxwriter,(installed),forge,(no house import found),YES_ORPHAN_CANDIDATE,,one grep each before purge (flag 6),
+pyinstaller,(installed),forge,Guardian packaging,no,LATENT_BY_DESIGN,keep + document (flag 6),
+pytest,(installed),forge,test arm,no,LATENT_BY_DESIGN,keep + document (flag 6),
+cupy-cuda12x,(installed),forge,GPU experiments,no,LATENT_BY_DESIGN,keep + document (flag 6),
+tifffile,(installed),forge,geo/raster stack (terrain_harvest),no,LATENT_BY_DESIGN,keep + document (flag 6),

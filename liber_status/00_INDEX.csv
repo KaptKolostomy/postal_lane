@@ -1,12 +1,12 @@
-generated_at,2026-09-26 02:32 UTC
-source_hash,1ca0620
+generated_at,2026-09-26 03:24 UTC
+source_hash,1860d58
 sheet,rows,source,commit
-01_TOOLS,0 rows,rig_audit,1ca0620
-02_VENVS,0 rows,rig_audit,1ca0620
-03_TESTING,10 rows,vault,1ca0620
-04_BUGS,7 rows,both,1ca0620
-05_IDEAS,21 rows,rig_audit,1ca0620
-06_OPEN_ITEMS,11 rows,vault,1ca0620
-07_FLEET,7 rows,vault,1ca0620
-08_DOCTRINES,12 rows,vault,1ca0620
-09_TIMELINE,13 rows,vault,1ca0620
+01_TOOLS,32 rows,rig_audit,1860d58
+02_VENVS,37 rows,rig_audit,1860d58
+03_TESTING,10 rows,vault,1860d58
+04_BUGS,7 rows,both,1860d58
+05_IDEAS,21 rows,rig_audit,1860d58
+06_OPEN_ITEMS,11 rows,vault,1860d58
+07_FLEET,7 rows,vault,1860d58
+08_DOCTRINES,12 rows,vault,1860d58
+09_TIMELINE,13 rows,vault,1860d58

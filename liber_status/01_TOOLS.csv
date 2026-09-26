@@ -1,0 +1,32 @@
+name,path,category,purpose,status,hygiene_flag,evidence,last_verified,verification_method,custody_sha256,known_unknown_id
+vandal_box,tools/vandal_box/vandal_box.cpp,C++/FSM,"FSM/KB trainer box (C++ twin of vandal_lite)",CURRENT,,exe 09-22 >= src 09-22,2026-09-25,exe newer than src + audit 1a table,fc31e5f63da326bd,
+vandal_lite,tools/vandal_lite/,Python/FSM,"FSM/GOAP/DPARQD engine (11 files, 2107 LOC)",CURRENT,,selftest 17/17 exit 0,2026-09-25,selftest witness,,KU-6
+acme_moose_cli_v3,tools/native_pipe/acme_moose_cli-v3.cpp,C++/C2,"Named-pipe C2 CLI (PING/ECHO/STAT/QUIT)",CURRENT,,selftest exit 0,2026-09-25,pipe selftest witness,bc6ac5769bde7e03,
+acme_moose_cli_v2,tools/acme_moose_cli-v2.cpp,C++/C2,"v2 CLI -> builds acme_c2_core.exe",STALE,,exe 09-09 < src 09-10,2026-09-25,audit 1a table,ed7607ef9d0c8b7d,
+native_shm_bridge,src/native/native_shm_bridge.cpp,C++/C2,Shared-memory bridge,CURRENT,,exe 09-14 >= src 09-14,2026-09-25,audit 1a table,8f0e41e1d29b0206,
+fortgrid_core,src/native/fortgrid_core.cpp,C++/LOS,"Fortification-grid fail-closed reader (.fgb)",CURRENT,,smoke 09-25 custody MATCH,2026-09-25,probe custody MATCH + ray receipt,a722789e50aca086,
+modulator_shim,src/native/modulator_shim.cpp,C++/cognition,Cognitive modulator shim,UNBUILT,,no artifact ever,2026-09-25,audit 1a table,,
+native_control_injector,src/native/native_control_injector.cpp,C++/C2,Stub 6 lines dead since 09-10,STUB,,absorb or delete,2026-09-25,audit 1c stub triage,,
+fortgrid.py,tools/fortgrid.py,Python/maze,Maze/pathfinding lane core,CURRENT,,maze lane nightly use,2026-09-25,audit 1b highlights,,
+maze_clip_analyzer.py,tools/maze_clip_analyzer.py,Python/maze,Wall-clip detection (L5 C3 detector family),CURRENT,,maze lane nightly use,2026-09-25,audit 1b highlights,,KU-3
+tacview_forensics_l5.py,tools/tacview_forensics_l5.py,Python/maze,"KU-3 despair-clip forensics (stall/no-net-progress/clip/skirt)",CURRENT,,v2 refined run 09-26,2026-09-26,refined two-track run (both series parsed),,
+kill_shot_geometry.py,tools/kill_shot_geometry.py,Python/ballistics,"Seam-threading ballistic geometry (mmap grid)",CURRENT,,py_compile clean post-fix,2026-09-25,py_compile + witnessed numbers (D8),,
+build_eyes_miz.py,tools/build_eyes_miz.py,Python/miz_builder,"GO2_EYES_v1.miz builder (v5 generalized SCRIPTS chain)",CURRENT,,SELF-VERIFY PASS,2026-09-25,builder self-verify,,KU-10
+build_eyes_batch.py,tools/build_eyes_batch.py,Python/miz_builder,"E0 B1 batch: 50 miz + manifest + closer",CURRENT,,B1 built 09-25,2026-09-25,batch self-verify + manifest,,KU-10
+maze_batch_watchdog.py,tools/maze_batch_watchdog.py,Python/ops,"Batch watchdog v2 (verdicts/restart/shutdown flag-armed)",CURRENT,,flag-armed idle,2026-09-25,runbook review,,KU-10
+eyes_emit.py,tools/eyes_emit.py,Python/maze_builder,"MAZE_EYES_v1 emitter (392 occluders embedded)",CURRENT,,pair-verified 39/39,2026-09-25,eyes_pair_check.py vs lua-5.4.1 selftest,,
+map_emit.py,tools/map_emit.py,Python/maze_builder,"MAZE_MAP_v1 poor-man's tacview emitter (75x180 @20 m)",CURRENT,,pair-verified 150/150,2026-09-25,map_pair_check.py,,
+librarian_ingest.py,src/librarian_ingest.py,Python/ingest,"EPUB/PDF/DOCX ingest -> chromadb",BROKEN_PATHWAY,,8 pkgs uninstalled in every venv,2026-09-25,audit 1b/flag 4,,KU-9
+core_schema.py,src/core_schema.py,Python/schema,VirtualSoul pydantic schema,ALIVE,,polars,2026-09-25,audit 1b,,
+core_pipeline.py,src/core_pipeline.py,Python/pipeline,Placeholder one-function stub,STUB,,placeholder by design,2026-09-25,audit 1c stub triage,,
+pyMCP_Blender_RCS_v2,tools/pyMCP_Blender_RCS_Server_v2.py,Python/MCP,RCS MCP server,BROKEN_IMPORT,,dash-vs-underscore import bug,2026-09-25,audit 1b/flag 4,,
+soulsmith_mcp_server,tools/soulsmith_mcp_server.py,Python/MCP,MCP server (unversioned),ALIVE,,shield test expects _v3 (missing),2026-09-25,audit 1b/flag 4,,
+test_soulsmith_shield_v2.py,src/verification/test_soulsmith_shield_v2.py,Python/verification,Shield test harness,CANNOT_RUN,,imports soulsmith_mcp_server_v3 (nonexistent),2026-09-25,audit 1b/flag 4,,
+qwen_lane_runner.py,tools/agent_voice/qwen_lane_runner.py,Python/voice,Qwen3-TTS lane runner,PARKED,,module qwen_tts never existed; models present,2026-09-25,audit 1b/flag 4,,
+compile_native_solvers.bat,tools/compile_native_solvers.bat,Build_lane,Native build bat (knows v2 CLI only),STALE,,lane fragmentation finding (bat vs .build),2026-09-25,audit 1a/flag 1,,
+requirements-frozen-2026-09-14.txt,requirements-frozen-2026-09-14.txt,Pin_file,Frozen requirements (pre-dates opencv/scipy/pydcs adds),STALE,,core undrifted; pin-gaps due re-freeze,2026-09-25,audit 1c staleness,,
+overnight_diagnostic.py,tools/overnight_diagnostic.py,Python/audit,Read-only 33-check house diagnostic,ALIVE,,report 5 FAIL/8 WARN/20 OK 09-25,2026-09-25,diagnostic receipt data/audits/diagnostic_2026-09-25_2220,,KU-11
+gpg_probe.ps1,tools/gpg_probe.ps1,Ops/Custody,GPG home + fingerprint probe (GNUPGHOME law),CURRENT,,works via GNUPGHOME export,2026-09-25,ceremony fingerprint match,,
+push_lane.sh,tools/push_lane.sh,Ops/lane,Postal carrier (lane push script),CURRENT,,push-verified receipts 09-26,2026-09-26,lane git receipts,,
+flag_scan.py,data/audits/build_tool_audit_2026-09-25/flag_scan.py,Audit/beat,"Orphan/drift/stale-pyc scan (Phase 0 beat candidate)",CANDIDATE_BEAT,,Phase 0 punch #6,2026-09-25,audit adoption recommendation,,
+geotiff_emitter.py,tools/geotiff_emitter.py,Python/geo,14-band substrate emitter (E7/E7b source),ALIVE,,substrate witnessed 09-25,2026-09-25,band inventory receipt,,
