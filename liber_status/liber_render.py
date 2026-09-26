@@ -27,6 +27,11 @@ def load_sheet(name):
     with open(f, newline="", encoding="utf-8") as fh:
         rows = list(csv.reader(fh))
     cols = SCHEMA["sheets"][name]["columns"]
+    # v1.1 fix (Marco 09-26): headered CSVs (01/02) must not render their
+    # own header as a phantom data row. Detect + drop; headerless sheets
+    # (raw-append) pass through untouched.
+    if rows and [c.strip() for c in rows[0]] == [c.strip() for c in cols]:
+        rows = rows[1:]
     return cols, rows
 
 GREEN = PatternFill("solid", fgColor="C6EFCE")
