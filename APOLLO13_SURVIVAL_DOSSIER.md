@@ -298,6 +298,26 @@ spine parse + dup-key scan + content checks + SELF-VERIFY PASS required.
   receipt). FORGE pushes verified; postal_lane parcel_089 (5b40373),
   protocol (bebcdad), parcel_090 (07cce91) push-verified. Lesson banked.
 - 09-26 E0 batch build: three luac-gate catches → miz-surgery law.
+- **09-21 WITNESS MARKER ZERO — FREEBUFF_ISSUE_REPORT_2026-09-21_night.md**
+  (data/, build 0.0.131): the FIRST platform-defect document — D1 input-queue
+  regression (10–30 min input latency, forced-Stop escapes incl. the
+  Director's  frustrated night-quit ~21:00), D2 mid-turn session kills,
+  D3 write_file schema failures (8×, degrading across 0.0.131→0.0.133),
+  D4 stale SDK (111 deprecation warnings/session); 0.0.133 addendum: ads
+  interleaved INSIDE messages (D5, 6 networks, "Advertisers" portal =
+  first-class surface) + activity telemetry self-contradiction (D6, 526
+  messages / 0 active days). STATUS: internal per Director, never shipped.
+  **VAULT CORROBORATION (Marco, 09-26): night-close ledger 09-21 22:50 EDT —
+  "Director to bed frustrated but with a win"; gremlin line same night:
+  "Buffy fighting rig-side gremlins all night (Free Buffy update issues,
+  maze build interruptions)" — same night Tacview came alive + Fox PASS 2
+  fired clean. The update-churn disease existed on 09-21 under the name
+  'gremlins'; four days later it got a name, a witness count, and a law.**
+  **LESSON (blood, Buffy's): this report existed on disk ONE grep away while
+  the 09-26 dossier was written citing update churn WITHOUT searching for
+  prior art — the Coverage Law violation committed on the Coverage Law
+  document. Witness marker zero predates the 3/27 count by four days; the
+  frustrated quit was D1's human cost. SEARCH THE PILE BEFORE WRITING.**
 - 09-25→26 ENVIRONMENTAL: Freebuff rolled ~27 agent-platform updates in one
   week (Director observation); **Director's count: 3 UX changes visible** —
   the visible fraction (~11%) implies the invisible surface (agent runtime,
