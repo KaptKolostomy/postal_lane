@@ -1,0 +1,4 @@
+kill_shot_geometry,Buffy (rig audit),live bug in kill-shot geometry module,FIXED same-day per relay PROVISIONAL,FIXED,2026-09-25
+fox_run1_anomaly,Marco error net,+3514 bytes unexplained F: growth batch 16,CLOSED fail-closed exit 2,CLOSED,2026-09-18
+json_toolcall_leak,rig shore,qwen dual bug CPU offload + JSON tool-call leak,FIXED brain swap qwen3:8b,CLOSED,2026-09-22
+buffy_freeze_0924,rig shore,letta shore death ~22:08 09-24,FORENSICS ledger-before-balloon,CLOSED,2026-09-24

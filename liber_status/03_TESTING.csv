@@ -1,0 +1,10 @@
+T-GRID-1,grid battery,structure-table pathfinder grid test,PASS,PROVEN,2026-09-24
+T-MAZE,maze battery,A* pathfinding baseline,PASS,PROVEN,2026-09-24
+T-ARB-1,absorption arbitration,planner-to-AIEN handoff holds under contact,PLANNED,,absorption phase 2
+T-ARB-2,absorption arbitration,re-plan after reaction completes,PLANNED,,absorption phase 2
+T-7,GOAP landmine,designed-thresholds fix applied,PASS,HELD,2026-09-19
+G2,GOAP landmine battery,corpus v1.1 execution,FAIL,10 HELD 0 DEAD determinism PROVEN,2026-09-19
+FOX-26,fox first test,error net + fail-closed protocol,PASS,26/26,2026-09-18
+FOX-RUN1,fox first test,run1 anomaly +3514B F: growth,FAIL,fail-closed exit 2 INVALID,2026-09-18
+V1-V4,contamination battery,blind A/B contamination verification,PLANNED,,cloud-082
+S1-S7,sandbox law,clean-session A/B protocol,PLANNED,,cloud-081

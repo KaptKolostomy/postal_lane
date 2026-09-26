@@ -1,0 +1,7 @@
+Ms. Fox,The Librarian,qwen2.5-coder:14b,~9GB+offload,DEPLOYED,Church-only; App Server
+Merlin,The Tactician,qwen3:8b,~5.2GB,DEPLOYED,State-adjacent; brain swap 09-22
+Gideon Crane,The Quartermaster,PENDING,BUILD PENDING,State-side SAFE,build pending
+Loxley,The Bard,PENDING,BUILD PENDING,Church-side,build pending
+Aurelius,The Gardener,PENDING,BUILD PENDING,Church-side,build pending
+Buffy,conduit rig agent,GLM 5.3 Flash,rig,ACTIVE,external reviewer + rig shore
+VANDAL-Lite,runtime tier,qwen3:8b,~5.2GB,DEPLOYED,Church unplugged NOT a fork
