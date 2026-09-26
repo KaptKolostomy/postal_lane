@@ -1,11 +1,15 @@
-rig shore restart,infrastructure,Director,rig letta shore down since 09-24,red,OPEN
+rig shore restart,infrastructure,Director,rig letta shore down since 09-24,green,"CLOSED 09-26 — D5: rig went quiet not shipwreck; lane push gap, parcels 089-099 crossed"
 depth battery runs,cognition,Buffy,rig shore restart,amber,PENDING
 voice wire-up Comfy TTS,voice,Director,execution window,amber,PENDING
 Guardian v3.3 UNBUILT + v3.1 custody repair DONE 09-25,guardian,Buffy,v3.3 scope gavel owed,amber,PENDING
 HTN spine gavel,planning,Director,awaiting ruling,amber,PENDING
 sealed key reveal,security,Director,custody chain,amber,PENDING
-absorption Phase 0 punch list,absorption,both,Buffy receipts crossing lane,red,OPEN
-Liber Status sheets 01/02,liber,Buffy,emit CSV per schema v1.0,amber,PENDING
-Liber Status generator build,liber,Marco,none,green,IN_PROGRESS
+absorption Phase 0 punch list,absorption,both,Buffy receipts crossing lane,green,"CLOSED-REGISTERED 09-26 — dev doc 43b2631, 8 items witnessed+sequenced"
+Liber Status sheets 01/02,liber,Buffy,emit CSV per schema v1.0,green,"CLOSED 09-26 — emitted v1.1 (31+36 rows), render-check PASS after phantom-header fix 4f7f3d7"
+Liber Status generator build,liber,Marco,none,green,CLOSED 09-26 — built + v1.1 header fix shipped
 TETWR courtesy draft,aircraft,Director,license check first,amber,PENDING
-rev1 passphrase protection audit,security,Director,key decrypted batch-mode without passphrase,red,OPEN
+rev1 passphrase protection audit,security,Director,key decrypted batch-mode without passphrase,red,"OPEN — RED stands; key recovered 09-26 but batch-mode decrypt still unaudited"
+trainer Q1/Q4/Q5 gavels,planning,Director,Marco recs DELIVERED cloud-104,amber,PENDING — Q2/Q3/Q6 close-ready on countersigns
+MOOSE upflow submission,upstream,Director,"conformity CONDITIONAL PASS cloud-103; 2 scrubs owed rig-side",amber,"PENDING — scrub C1 rig paths, C2 doctrine voice"
+Watch Card v1 merge + adoption,doctrine,Buffy+Director,Marco v1 delta cloud-101 delivered,amber,PENDING — merge then Director gavel
+vault single-copy risk,infrastructure,Marco,none,green,CLOSED 09-26 — encrypted backup to lane cloud-102 (7abe6dff)
