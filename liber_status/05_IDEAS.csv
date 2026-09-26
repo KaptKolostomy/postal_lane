@@ -1,2 +1,21 @@
-PJ-01,2026-09-25,Buffy,pickle juice,awaiting Order 3 parcels,PROVISIONAL,rig audit pending
-BR-01,2026-09-25,Buffy,brainstorm,awaiting Order 3 parcels,PROVISIONAL,rig audit pending
+PJ-1,2026-09-24,Director,pickle juice,M92 revetment db category flip as pathfinding lever test,DONE,spawned MAZE_Fortify+DeFort
+PJ-2,2026-09-24,Director,pickle juice,substitute-db template makes any mod statics pathfinding-real,ACTIVE,breadth test pending
+PJ-3,2026-09-24,Director,pickle juice,MOOSE tasking baseline in maze,DONE,v3B/C carry telemetry
+PJ-4,2026-09-24,Director,pickle juice,gate-keeper flag lattice counts corridor usage,ACTIVE,v3B wired
+PJ-5,2026-09-24,Director,pickle juice,overlap ladder 0cm-2m seam threshold,BUILT,awaits flight GO2_LADDER_SEAM_v1
+PJ-6,2026-09-24,Director,pickle juice,revetments cut LOS where containers didnt Cover Law,ACTIVE,v3C LOS lab built
+PJ-7,2026-09-24,Director,pickle juice,Freebuff restart Lassie metaphor,DEAD,humor banked
+PJ-8,2026-09-24,Director,pickle juice,infantry animations terrible,PARKED,engine constraint noted
+PJ-9,2026-09-24,Director,pickle juice,analyze OBS video with OpenCV-class tools,DONE,video_lab pipeline proven
+PJ-10,2026-09-24,Director,pickle juice,something fantastic in Tacview,RESOLVED,became maze verdicts
+PJ-11,2026-09-22,Buffy,pickle juice,lab mods as OvGME packs click-toggle,PARKED,awaiting Chief
+PJ-12,2026-09-22,Buffy,pickle juice,Qwen3-TTS voice lane agent_voice,PARKED,qwen_tts module lost see audit
+PJ-13,2026-09-25,Director+Marco,pickle juice,TETWR fork-and-gift Fresco way,PLANNED,license courtesy first
+BR-1,2026-09-25,night tab,brainstorm,belief-state law probed via v3C fort_wipe/ghost/route,ACTIVE,design doc owed
+BR-2,2026-09-25,night tab,brainstorm,seam-threading kill-shot: wall hack is seam geometry not LOS fraud,ACTIVE,Cover-Law protocol
+BR-3,2026-09-25,night tab,brainstorm,.fgb mmap grid as runtime belief-grid substrate,ACTIVE,absorption Phase 0 candidate
+BR-4,2026-09-25,Buffy,brainstorm,unify native build lanes one script or CMake,ACTIVE,audit punch #1
+BR-5,2026-09-25,Buffy,brainstorm,flag_scan.py recurring orphan watch beat,ACTIVE,audit punch #6
+BR-6,2026-09-24,Buffy,brainstorm,end-of-mission gate-flag dump to log,DONE,v3B/MONITOR lineage
+BR-7,2026-09-24,Buffy,brainstorm,Saturation Law as difficulty knob,DONE,MAZE_LAB_DOCTRINE L5
+BR-8,2026-09-25,Marco,brainstorm,absorption doctrine design references clean-room,GAVELED,Phase 0 punch list exists
