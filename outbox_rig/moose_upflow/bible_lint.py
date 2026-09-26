@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""bible_lint.py — DCS Scripting Bible P2 gate + REPAIR mode (v1.0, 2026-09-25).
+"""bible_lint.py — DCS Scripting Bible P2 gate + REPAIR mode (v1.1, 2026-09-26).
 
 Traps (and optionally repairs) the witnessed Lua failure classes in house scripts:
 
@@ -21,16 +21,69 @@ Usage:
   python bible_lint.py <path>... --fix      # apply safe repairs (E01, E05, E06) with .bak receipts
   python bible_lint.py <path>... --json     # machine output for the Liber/beat
 
+PORTABILITY (v1.1, C1 scrub per cloud-103): zero machine paths in source.
+Every external path resolves CLI flag > env var > auto-detect (walk up from
+this file to the repo root, then repo-relative):
+  --luac       BIBLE_LINT_LUAC        <root>/tools/lua54/bin/luac54.exe
+  --lua        BIBLE_LINT_LUA         <root>/tools/lua54/bin/lua54.exe
+  --registry   BIBLE_LINT_REGISTRY    <root>/docs/NAME_REGISTRY.md
+  --json-out   BIBLE_LINT_JSON_OUT    <root>/data/audits/bible_lint_latest.json
+  --moose-lua  BIBLE_LINT_MOOSE_LUA   Saved Games/DCS/Scripts/MOOSE/Moose.lua
+                                          (relocated Saved Games honored via
+                                           Windows User Shell Folders)
+If luac54 cannot be resolved, E07 degrades to a WARN (parse check SKIPPED) —
+stated, never assumed.
+
 Exit code: 0 clean, 1 findings, 2 repaired-all, 3 unrepairable remain.
 """
-import argparse, hashlib, json, re, shutil, subprocess, sys, time
+import argparse, hashlib, json, os, re, shutil, subprocess, sys, time
 from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-LUAC = r"F:\SOULSMITH_FORGE\tools\lua54\bin\luac54.exe"
-LUA = r"F:\SOULSMITH_FORGE\tools\lua54\bin\lua54.exe"
-REG = Path("F:/SOULSMITH_FORGE/docs/NAME_REGISTRY.md")
+def _repo_root():
+    """Walk up from this file to the house root.
+    Marker: docs/NAME_REGISTRY.md — unique to the FORGE root. (.git is NOT a
+    safe marker: data/postal/ holds a nested legacy .git that false-matches.)"""
+    here = Path(__file__).resolve().parent
+    for cand in (here, *here.parents):
+        if (cand / "docs" / "NAME_REGISTRY.md").is_file():
+            return cand
+    return None
+
+_ROOT = _repo_root()
+
+def _resolve(cli, env, *rel):
+    """CLI value > env var > repo-root-relative auto-detect (must be a file) > None."""
+    if cli:
+        return Path(cli)
+    v = os.environ.get(env)
+    if v:
+        return Path(v)
+    if _ROOT is not None and rel:
+        p = _ROOT.joinpath(*rel)
+        if p.is_file():
+            return p
+    return None
+
+def _saved_games_dir():
+    """Windows Saved Games dir (relocations honored via User Shell Folders); falls back to ~/Saved Games."""
+    try:
+        import winreg
+        k = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
+                           r"Software\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders")
+        v, _ = winreg.QueryValueEx(k, "{4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4}")
+        return Path(os.path.expandvars(v))
+    except Exception:
+        return Path.home() / "Saved Games"
+
+# C1 (cloud-103): resolved, never hardcoded. Module defaults honor env +
+# repo-root auto-detect; main() re-resolves from CLI flags when given.
+LUAC = _resolve(None, "BIBLE_LINT_LUAC", "tools", "lua54", "bin", "luac54.exe")
+LUA = _resolve(None, "BIBLE_LINT_LUA", "tools", "lua54", "bin", "lua54.exe")
+REG = _resolve(None, "BIBLE_LINT_REGISTRY", "docs", "NAME_REGISTRY.md")
+MOOSE_PIN = _resolve(None, "BIBLE_LINT_MOOSE_LUA") or (_saved_games_dir() / "DCS" / "Scripts" / "MOOSE" / "Moose.lua")
+JSON_OUT = _resolve(None, "BIBLE_LINT_JSON_OUT", "data", "audits", "bible_lint_latest.json")
 
 MOOSE_FACING = re.compile(
     r'(?:GROUP|UNIT|AIRBASE|STATIC|SCENERY):FindByName\s*\(\s*(?:"[^"]*"|\'[^\']*\')'
@@ -42,8 +95,12 @@ NAMEY = re.compile(r'"([A-Za-z0-9_\-\. ]{3,50})"')
 CHARSET_OK = re.compile(r'^[A-Za-z0-9_.]+$')
 
 def luac_ok(p):
+    if LUAC is None:
+        return None, ["luac54 not resolved — pass --luac or set BIBLE_LINT_LUAC"]
+    if not Path(LUAC).exists():
+        return None, [f"luac54 missing at resolved path: {LUAC}"]
     try:
-        r = subprocess.run([LUAC, "-p", str(p)], capture_output=True, text=True, timeout=30)
+        r = subprocess.run([str(LUAC), "-p", str(p)], capture_output=True, text=True, timeout=30)
         return r.returncode == 0, (r.stderr or "").strip().splitlines()[:1]
     except Exception as e:
         return False, [str(e)]
@@ -105,9 +162,11 @@ def lint_file(p: Path, fix=False):
                 txt = guard + txt
                 F[-1] = ("E06", "WARN", "fail-closed guard injected (.bak receipt)", True)
 
-    # E07 luac parse
+    # E07 luac parse (skips LOUDLY when luac54 unresolvable — never silently)
     ok, err = luac_ok(p)
-    if not ok:
+    if ok is None:
+        F.append(("E07", "WARN", f"parse check SKIPPED: {err[0]}", False))
+    elif not ok:
         F.append(("E07", "ERROR", f"luac54 parse FAIL: {err[0] if err else '?'}", False))
 
     # E11 sandbox-banned globals (mission env strips os/io/require/lfs — silent death)
@@ -125,8 +184,8 @@ def lint_file(p: Path, fix=False):
                 F.append(("E11", "ERROR", f"sandbox-banned: {why} — dies silently at runtime", False))
 
     # E12 MOOSE constructor/verb receipt vs PINNED build (NewROUTE trap, automated)
-    moose_pin = Path(r"E:/GAMES/Saved Games/DCS/Scripts/MOOSE/Moose.lua")
-    if missionish and moose_pin.exists():
+    moose_pin = MOOSE_PIN
+    if missionish and moose_pin is not None and moose_pin.is_file():
         moose_src = moose_pin.read_text(encoding="utf-8", errors="replace")
         moose_defs = set(re.findall(r'function\s+([A-Z][A-Za-z0-9_]*):([A-Za-z0-9_]+)\s*\(', moose_src))
         moose_classes = {c for c, _ in moose_defs} | set(re.findall(r'([A-Z][A-Za-z0-9_]*)\s*=\s*\{\s*className', moose_src))
@@ -146,11 +205,28 @@ def lint_file(p: Path, fix=False):
     return F
 
 def main():
+    global LUAC, LUA, REG, MOOSE_PIN, JSON_OUT
     ap = argparse.ArgumentParser()
     ap.add_argument("paths", nargs="+")
     ap.add_argument("--fix", action="store_true")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--luac", help="luac54 binary (env BIBLE_LINT_LUAC)")
+    ap.add_argument("--lua", help="lua54 binary (env BIBLE_LINT_LUA)")
+    ap.add_argument("--registry", help="NAME_REGISTRY.md path (env BIBLE_LINT_REGISTRY)")
+    ap.add_argument("--json-out", dest="json_out", help="--json output path (env BIBLE_LINT_JSON_OUT)")
+    ap.add_argument("--moose-lua", dest="moose_lua", help="pinned Moose.lua for E12 (env BIBLE_LINT_MOOSE_LUA)")
     a = ap.parse_args()
+
+    # C1: CLI > env > auto-detect — nothing machine-specific lives in this file
+    if a.luac: LUAC = Path(a.luac)
+    if a.lua: LUA = Path(a.lua)
+    if a.registry: REG = Path(a.registry)
+    if a.moose_lua:
+        MOOSE_PIN = Path(a.moose_lua)
+    if a.json_out:
+        JSON_OUT = Path(a.json_out)
+    elif JSON_OUT is None:
+        JSON_OUT = (_ROOT / "data" / "audits" / "bible_lint_latest.json") if _ROOT else Path("bible_lint_latest.json")
 
     files = []
     for s in a.paths:
@@ -178,7 +254,8 @@ def main():
     for c, n in sorted(report["counts"].items()):
         print(f"  {c}: {n}")
     if a.json:
-        jp = Path("F:/SOULSMITH_FORGE/data/audits/bible_lint_latest.json")
+        jp = JSON_OUT
+        jp.parent.mkdir(parents=True, exist_ok=True)
         jp.write_text(json.dumps(report, indent=1), encoding="utf-8")
         print(f"json: {jp}")
     sys.exit(2 if (n_rep and not n_err) else (1 if n_err else (0 if not report["files"] else 2 if a.fix else 1)))
