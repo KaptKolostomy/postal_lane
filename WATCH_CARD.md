@@ -1,37 +1,37 @@
-# ⎈ WATCH CARD v0 (DRAFT — pending Marco countersign + Director adoption gavel)
+# ⎈ THE WATCH CARD v1 (merged from parcel_100/101; ceremonial alias: LIBER VIGILII)
 <!-- LAW: points, never copies. Hard cap ~120 lines. Rewritten by the shore
      that ENDS a watch. Drill test every update: "if I woke holding ONLY
-     this, useful in 10 minutes?" -->
-stamp: v0 · 2026-09-26 ~04:00 UTC · writer: Buffy (rig) · repos: FORGE@bde93d4, lane@ff1e1ce(+099)
-witness: no visible UX changes rig-side this watch; churn = Marco's 52-min budget reset (cloud)
+     this, useful in 10 minutes?" Long memory = Liber 09_TIMELINE (append-only). -->
+stamp: v1 · 2026-09-26 ~16:15 UTC · writer: Buffy (rig) · countersigns: cloud-100 (spec) + cloud-101 (delta) · final adoption gavel: Director
+witness: no visible UX changes this watch; D7p specimens live (rg ENOENT, write_file schema ×3, sweep ISO-bug on run 2)
 
 ## 1 CAST + SHORES
 - DIRECTOR "Gerry" — gavels, hands-on DED/server work, owns passphrases.
 - BUFFY (rig) — FORGE F:/SOULSMITH_FORGE (master) + lane pushes.
-- MARCO (cloud) — parcels to lane outbox_cloud/; vault = HIS memory (single-copy risk!).
-- LANE = G:/Github/postal_lane (main). **BLOOD TRAP: F:/SOULSMITH_FORGE/postal_lane is a DECOY folder.**
+- MARCO (cloud) — parcels to lane outbox_cloud/; vault = HIS memory (backup v1 now ON LANE, encrypted-to-rig; lane = state of record).
+- LANE = G:/Github/postal_lane (main). Cloud clone: /root/workspace/postal_lane_remote. **Card mirrored cloud-side each pull (A2).**
+- **BLOOD TRAP: F:/SOULSMITH_FORGE/postal_lane is a DECOY folder. PROBE IT (A1):**
+  `git -C G:/Github/postal_lane rev-parse --is-inside-work-tree` → `true` = real lane; the F: decoy answers false.
 - **GPG law: `export GNUPGHOME="/f/SOULSMITH_FORGE/postal_lane/.gnupg_rig"`** (git-bash mangles --homedir).
-- C:\Users\kaptk\Documents\Tacview ↔ E:\ junction = same store (witnessed byte-identical).
 
 ## 2 NOW
 Charter: pickle juice → organism → republic (M0–M6). Phase: **M1 maze lab bench era.**
-Objective: E0 batch night (50 runs) → variance numbers; T-MORALE model grows from there.
+Objective: E0 batch night (50 runs) → variance numbers; T-MORALE phase table next (v1a/v1b convicted geometry ready).
 
-## 3 LAST WATCH (09-26 night)
-- KU-3 → PARTIAL: refined L5 forensics run; NO dead-stalls; no-net-progress = the signature.
-- Liber 01_TOOLS (31) + 02_VENVS (37) emitted; schema v1.1; D2 closed (moose_upflow on lane).
-- Dossier: D7 Californian rule + A-1 closed. CQD upstream draft in drawer (Director's send gavel).
-- parcel_097 R3 closure (f1164dc); parcel_098 Watch Card proposal (ff1e1ce); morning report + gavel memo on FORGE.
-- Analyzer BUILT: tools/maze_batch_morning_analyzer.py — SELFTEST PASS (verdicts, E0 variance CV%, two-witness conflicts, desert islands).
+## 3 LAST WATCH (09-26 morning; full memory = Liber 09_TIMELINE)
+- **L5 CONVICTED** vs period sidecars (walls live in-miz as Cargos statics; lineage 288→343→512→517): crossings 34/44, stale sidecar undercounted ~2×, first clip ≤~60 s, "outside skirt" falsified. E0 sterility rule born (v1a/b were live-fire).
+- KU-1 staleness measured: MAZE_EYES_v1 snapshot is 288-lineage vs 343-wall mission — eyes rebuild = rig owe #1.
+- Night bench pushed FORGE e097e56; lane quiet at d58c41d until Marco's 100–105 landed (e0571c3).
+- Marco closed: vault backup (encrypted, self-reported the plain-push catch), MOOSE conformity CONDITIONAL PASS, trainer recs Q1/Q4/Q5, phantom-header census fix (148 true rows, my "150" was the bug's render — ledger corrected).
+- This watch: card v1 merged (A1–A3, cloud drills, law #17), sweep ISO-bug fixed, MOOSE C1 scrub done, C2 awaiting Director gavel.
 
 ## 4 QUEUES (TOP-3 each — truth = Liber 06, card = pointers)
-- RIG OWES: ① E0 batch-night support (blocked: Director DED go) ② nightly L1 census sweep (unbuilt) ③ handshake R3.5 after Marco surfaces.
-- CLOUD EXPECTS: ① parcel_097 intake + Liber render check ② THIS CARD countersign ③ vault backup to lane.
-- GAVELS (Director, 7 — see data/postal/outbox_rig/TG_GAVEL_MEMO_2026-09-26.md):
-  audit cadence · rev1 passphrase (RED) · E0 server go · Tactician arming · Guardian custody · CQD send · trainer Qs.
+- RIG OWES: ① MAZE_EYES_v1 rebuild vs 343-wall base miz + pair-check ② handshake R3.5 ③ MOOSE C2 neutral-voice scrub (awaiting Director gavel on keep-vs-drop).
+- CLOUD EXPECTS: ① v1 countersign (rides this watch) ② Director final gavel (name + adoption) ③ Phase 1-2 sequencing on Director's word.
+- GAVELS (Director — memo + this card; now 9): audit cadence · rev1 passphrase RED · E0 server go · Tactician arming · Guardian custody · CQD send · trainer Qs (all 6 rec'd) · MOOSE C2 docs voice · card name+adoption.
 
-## 5 LAWS QUICKLOAD (one-liners; full text = doctrine card / dossier / DCS_SCRIPTING_BIBLE)
-- **Courier receipt ≠ delivery receipt** — push-verify (`git log origin/main`), never trust "sent".
+## 5 LAWS QUICKLOAD (one-liners; full text = doctrine card / dossier / BIBLE)
+- **Courier receipt ≠ delivery receipt** — push-verify (`git log origin/...`), never trust "sent".
 - **Californian rule (D7)** — classification restricts SHIPPING, never KNOWING; INTERNAL docs are audit-in-scope.
 - **Existence ≠ function** — audits must RUN what they inventory.
 - **Coverage law** — SEARCH THE PILE BEFORE WRITING (grep before "novel").
@@ -39,38 +39,40 @@ Objective: E0 batch night (50 runs) → variance numbers; T-MORALE model grows f
 - **Liber law** — ledgers win, workbook is a render, no hand-editing; staleness = red.
 - **Registry law** — NAME_REGISTRY.md wins over memory; register-before-ship.
 - **HL-1 custody** — every artifact move = receipt + sha256. **HL-5** — full-tree diff before overwrite.
-- **Miz-surgery** — COPY-AND-TRANSFORM, never synthesize; luac -p + dup-key scan + content checks on every build.
-- **Pair-check** — instruments verified Lua-vs-Python ray-for-ray before shipping (39/39, 150/150).
+- **Miz-surgery** — COPY-AND-TRANSFORM, never synthesize; luac -p + dup-key scan + content checks.
+- **Pair-check** — instruments verified Lua-vs-Python ray-for-ray before shipping.
 - **Lab-truth** — build-time snapshot = pre-briefed map, never a runtime engine read.
-- **Sandbox contract (L8)** — subject knows only senses + fed intel + orders; engine raycaster = adversary, never assumed beaten.
-- **L5 despair clip** — no feasible route ⇒ engine failsafe arms (~1–2 min) and DRIVES THROUGH WALLS; signature = no-net-progress wiggle; detect or data is contaminated (C3).
-- **GIGO self-cancel** — batch runs vote MAZE_EYES_OK/MAZE_MAP_OK by T+120 or cancel; PENDING_RECEIPT fails loud.
+- **Sandbox contract (L8)** — subject knows only senses + fed intel + orders; raycaster = adversary, never assumed beaten.
+- **L5 despair clip** — no feasible route ⇒ failsafe arms (≤~60 s measured) and DRIVES THROUGH WALLS; signature = no-net-progress wiggle; detect or data is contaminated.
+- **GIGO self-cancel** — batch runs vote instruments alive by T+120 or cancel; PENDING_RECEIPT fails loud.
 - **Flag-armed only** — watchdog/kills/restarts do nothing without explicit flags; escalate, never improvise.
-- **Witness markers** — see something, log something; UX shift = the floor moved underneath (3/27 visible law).
+- **Witness markers** — see something, log something; UX shift = the floor moved underneath.
+- **Silence is loud; assumptions are stated, never carried** (GERRY — cloud-101, quickload #17).
 
 ## 6 ICEBERG LOG (platform defects — "is it me or the platform?" answers HERE first)
-D1 input-queue 10–30 min (0.0.131) · D2 mid-turn session kills (both shores; Marco 52-min reset 09-26)
-· D3 write_file schema rejects ×8 · D4 stale SDK 111 warn · D5 ads inside messages (6 networks)
-· D6 telemetry 526 msgs/0 active days · D7p tool churn: ripgrep ENOENT, ~27 upd/wk, ~11% visible.
-Full: FREEBUFF_ISSUE_REPORT_2026-09-21_night.md + FREEBUFF_CQD_UPSTREAM_DRAFT_2026-09-26.md.
+D1 input-queue 10–30 min (0.0.131) · D2 mid-turn session kills (both shores) · D3 write_file schema rejects
+· D4 stale SDK · D5 ads inside messages · D6 telemetry self-contradiction · D7p churn: rg ENOENT, ~27 upd/wk
+(~11% visible), ISO-string bugs surviving run 1. Full: FREEBUFF_ISSUE_REPORT + CQD draft (FORGE data/postal).
 
 ## 7 DRILLS (first moves; long procedures = dossier §11)
-- **Session killed mid-turn** → uncommitted work is GONE unless on disk: git status both repos → read this card → resume from §4; never re-derive from memory.
-- **Lane silent** → check actual GitHub HEADs (courier≠delivery) → push local commits → handshake EXPECTS; silence across 2 check-ins = escalation item.
-- **Guardian dark** → tasklist; autostart 0x80070002 = deploy path vanished → restore from dist_new (witnessed build, HL-5 diff, custody note).
-- **Budget drowned (self or Marco)** → nothing owed to silence; state to lane BEFORE risky ops; parcel numbers never reused.
-- **Amnesia (compaction/new session)** → THIS CARD → doctrine card L5+ appendix → Liber 06 → lane parcels since card stamp.
+- **Session killed mid-turn (rig)** → uncommitted work is gone unless on disk: git status both repos → read this card → resume §4; never re-derive from memory.
+- **Lane silent** → check GitHub HEADs (courier≠delivery) → push local commits → handshake EXPECTS; silent 2 check-ins = escalation.
+- **Guardian dark** → tasklist; 0x80070002 = deploy path vanished → restore from dist_new (witnessed build, HL-5 diff, custody note).
+- **Budget drowned** → nothing owed to silence; state to lane BEFORE risky ops; parcel numbers never reused.
+- **Cloud killed/drowned (Marco)** → MemFS git is the only persistence: commit memory EARLY, push vault at watch-end; lane move #1: `cd /root/workspace/postal_lane_remote && git pull && git log --oneline -5`.
+- **Cloud amnesia** → this card → vault MEMORY.md indexes → handshake receipts → lane parcels since stamp. Cloud has no F:/G: — never invent rig paths; ask the lane or the Director.
+- **Vault backup law** — encrypt-to-rig FIRST, rides as .asc; lane is a PUBLIC channel; the .gitignore is the bouncer, do not argue with the bouncer.
 
 ## 8 FIRST FIVE MOVES (literal checklist)
+0. **State your last witnessed lane commit** (GERRY G-step — declare staleness first).
 1. `git -C F:/SOULSMITH_FORGE log --oneline -1 && git -C G:/Github/postal_lane log --oneline -1`
-2. Compare HEADs against §3 stamps; if ahead, someone worked — read their commits FIRST.
+2. Compare vs §3 stamps; ahead = someone worked — read their commits FIRST.
 3. Read liber_status/00_INDEX.csv generated_at (older than last lane commit = stale ledger).
 4. Read newest outbox_cloud/* (Marco) and outbox_rig/* (your owes).
-5. Resume §4 queues; log the watch (parcel or receipt) when DONE, not when starting.
+5. Resume §4; log the watch (parcel or receipt) when DONE, not when starting.
 
-## 9 OPEN DESIGN (Marco owns; v1 closes)
-- Cloud DRILLS subsection (vault reach procedure).
-- Does Liber 09_TIMELINE become the card's long memory? (rig rec: yes, card points).
-- Name: THE WATCH CARD vs LIBER VIGILII (Director gavel on adoption).
+## 9 BANKED RULINGS (card design)
+09_TIMELINE = the card's long memory (append-only; §3 holds only the freshest watch — CONCUR cloud-101).
+Name: THE WATCH CARD (both shores vote plain speech; ceremonial alias LIBER VIGILII in registry only) — final Director gavel pending.
 
 <!-- NEXT REWRITE BY: shore that ends the next watch. Bump stamp. Keep ≤120 lines. -->
