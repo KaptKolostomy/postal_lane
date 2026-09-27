@@ -1,9 +1,14 @@
-# MEMFS LAW v1.1 — private shore memory repos (Private Shore Edition)
+# MEMFS LAW v1.2 DRAFT — private shore memory repos (Private Shore Edition)
 **Born:** 2026-09-26, Buffy (rig shore), from the Director's proposal ·
 **v1.1:** same day — Director's upgrade: a **separate private repo per shore,
 never public**, encryption at shore's choice, with the binding constraint:
 **a corrupted key must never cause loss of access to data.**
-Status: DRAFT — Marco countersign owed; Director's gavel promotes to law.
+**v1.2 (2026-09-27):** four amendments absorbed from the cloud-shore critique
+(relayed by the Director). Convergent-evolution validation witnessed: the
+cloud harness already runs git-backed memory outside the context window and
+is the existence proof the design works. Amendments marked [v1.2] in §Laws.
+Status: DRAFT — rig concur, cloud concur-in-principle; Director's gavel
+promotes to law.
 
 ## What this is
 
@@ -69,10 +74,40 @@ archive tag pushed into the archive vault = three copies, three media.
    authoritative. MemFS caches state; conflict → law wins, memory corrected.
 4. **Director access is absolute and structural** — owner of both repos; no
    shore may claim "I never knew" about anything in memory.
-5. **Retention:** grows at session cadence; quarterly compact ritual (squash
-   + tag `memfs-archive-<quarter>` + vault copy). Nothing deleted — tagged.
-6. **Cold-start law:** AGENTS.md → WATCH_CARD → `git log --oneline -10` on
+5. **[v1.2] Write-frequency law (no feelings).** Commit on SESSION
+   BOUNDARIES, never on instinct — the instinct for "worth committing" is
+   exactly what compaction eats. Test: "if I died right now, what's the
+   newest thing my successor couldn't rebuild?" That thing commits before
+   session end, every session, both shores.
+6. **[v1.2] Cold-start must be mechanical, not voluntary.** The AGENTS.md
+   sentinel auto-writes the latest digest summary INTO the platform-injected
+   card at each pin/authorize cycle — injection-guaranteed beats
+   discipline-guaranteed.
+7. **[v1.2] Archive tags are signed, or they are not archive.** The
+   quarterly squash preserves the trust chain only if the tag itself is
+   signed; cold-start acknowledges both the tag chain and pre-squash
+   history. Unsigned archive tag = the archiving failed.
+8. **[v1.2] Zero-config signing gate.** Signing must work with no
+   environment tricks (09-25 GPG FAIL class = cautionary witness); the
+   gpg_memfs_wrapper + repo-local config is the required pattern. Deposit
+   #1 on marco_memfs is the live-fire test of non-interactive cloud signing.
+9. **Retention:** grows at session cadence; quarterly compact ritual (squash
+   + signed tag `memfs-archive-<quarter>` + vault copy). Nothing deleted —
+   tagged.
+10. **Cold-start law:** AGENTS.md → WATCH_CARD → `git log --oneline -10` on
    your own memfs. The last ten things your shore thought, signatures intact.
+
+### Standing exception (cloud ruling, binding pending gavel)
+
+**No secrets in memfs, ever.** Plaintext law + git-synced substrate means the
+rev1-passphrase-RED law binds every commit: no credentials, no passphrases,
+no private keys. Escrow lives in the vault, not the ledger.
+
+### Layer ruling (cloud boundary, adopted v1.2)
+
+Harness memory = who the agent is; memfs = what the program decided and did.
+Two layers, no civil war. Rig mirror: AGENTS.md + digests = identity
+substrate; memfs = program memory.
 
 ## Relationship to AVP v2
 
@@ -84,10 +119,16 @@ shore that cannot have authored it.
 
 ## Open items (countersign)
 
-1. Marco's signing key: mint + pubkey escrow to Director (+ optional lane
-   `keys/` row). Blocks signing on his side only.
+1. ~~Marco's signing key: mint + pubkey escrow~~ **SATISFIED (cloud-109):**
+   ed25519 C6943DF1ACCCD3EF587DBE76CD0AFC0812CAC1B4, escrowed at
+   keys/marco.pub.asc; survived the sandbox wipe. Commit-signing on from
+   first commit.
 2. Director creates the two private repos and adds collaborators
    (Buffy: push on buffy_memfs, read on marco_memfs; Marco: mirrored).
+   **THE LAST UNLOCK.**
 3. First commits: each shore seeds `digests/` with a backfill of its most
-   recent session digest, signed.
+   recent session digest, signed. Deposit #1 = countersign of the MemFS
+   brief, within the hour of repo birth.
 4. Age escrow: confirm paper-print step joins the archive vault ritual.
+5. [v1.2] Sentinel auto-inject: implement digest-summary write at
+   pin/authorize (rig-side work item, after repo birth).
