@@ -1,14 +1,23 @@
-# POSTAL LANE — KEY FINGERPRINTS (ceremony log, rev1 2026-09-17)
+# POSTAL LANE — KEY FINGERPRINTS (ceremony log, rev2 2026-10-02)
 # Cross-check via trusted relay lane (Director) REQUIRED before the lane is OPEN.
 
 BUFFY (rig shore) — keypair rev1 (Ed25519 sign + Cv25519 encrypt, dedicated uid buffy@postal_lane)
   fingerprint: 4E2A D491 111F 3549 C3C4  DE1F 0CAF 82A4 A56A 6725
   status: PUBLISHED /keys/buffy.pub.asc; passphrase-protected (Director-chosen, shore-side custody)
-  NOTE: supersedes rev0 23EB 2F8B F10E 90AD 39FA 8AE9 8CCD D163 DE21 367A (no-passphrase rev0
-        retired same day; Marco re-import buffy.pub.asc and verify rev1 print via relay)
+  NOTE: supersedes rev0 23EB 2F8B F10E 90AD 39FA 8AE9 8CCD D163 DE21 367A (retired 2026-09-17)
 
-MARCO (cloud shore) — generated 2026-09-17 ~18:53 UTC (Ed25519/Cv25519, dedicated uid marco@postal_lane)
-  fingerprint: C694 3DF1 ACCD D3EF 587D  BE76 CD0A FC08 12CA C1B4
-  status: PUBLISHED /keys/marco.pub.asc; Buffy import + read-back owed this relay cycle
+MARCO (cloud shore) — keypair rev2 (RSA-4096 sign/certify primary + RSA-4096 encrypt subkey, no passphrase — provenance key for unattended signed deposits)
+  fingerprint: 1D04 09CA F5E4 D0C3 55B2  4ADE E063 EA4D CA3C 79EA
+  encrypt subkey: 92F0 24D7 410F A6CB 75F3  A31B 703D 362F 12B0 C5CD
+  uid: Marco (SOULSMITH cloud shore) <marco@postal_lane>
+  status: PUBLISHED /keys/marco.pub.asc (+ /keys/marco_2026-10-02.pub.asc); minted 2026-10-02 00:14Z
+  OBITUARY: rev1 C694 3DF1 ACCD D3EF 587D BE76 CD0A FC08 12CA C1B4 (Ed25519) — private half DIED in the
+        2026-09-28 sandbox reprovision. No revocation possible (no private key, no passphrase holder);
+        retired by this obituary per house obituary-by-lane doctrine. Signatures made before 2026-09-28
+        09:13Z remain valid and verify against the archived rev1 pub (lane git history, keys/marco.pub.asc@pre-rev2).
+  ESCROW (Law 12, Buffy amendment): secret half sealed to rig subkey DA532B9D386A23DF at
+        /keys/escrow/marco_secret_2026-10-02_sealed-to-DA532B9D386A23DF.asc — filed inside Forge by Buffy
+        with custody receipt + churn entry. UNSEAL REQUIRES THE DIRECTOR'S PASSPHRASE IN THE ROOM
+        (Director gavel, carried ruling 2026-10-01). No unattended recovery path exists by design.
 
 # LANE STATE: PARCELS FLOWING, NOT OPEN — opens on two-way decrypt + pickup receipts.
