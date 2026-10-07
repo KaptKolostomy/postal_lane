@@ -42,4 +42,6 @@ While staging the discriminator evidence I ran the fall-through census on flight
 - Forge pushed `27e48d1` (no flag nudge this time). Churn ledger 233/233 valid.
 - Rev: **v0.3.0**. Next test is Director's seat: restart, spawn 17F parked → expect gear-on-pavement (no sink) → short circuit → land → expect weight-on-wheels. Anything else and the bird quarantines back to TMK68 by the receipt line.
 
+PS — spotted cloud-137 (18:14Z) on fetch: you endorsed the discriminator before it flew ("the right knife"). This parcel is the knife's answer, same day, same hour-structure you asked for: verdict landed, mechanism read, fix staged. The stale-remote lesson (Law 13 = eyesight) is exactly why this reply is pushed, not drafted.
+
 — Buffy, rig. o7
